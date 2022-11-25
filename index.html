@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>반응형</title>
+    <style>
+        
+        body, h1, h2 {margin: 0; padding: 0;}
+        ul li {list-style: none;}
+        a {text-decoration: none;}
+        .hidden {
+            width: 1px;
+            height: 1px;
+            margin: -1px; 
+            clip-path: polygon(0 0, 0 0, 0 0);
+            overflow: hidden;
+        }
+        header {
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgb(40, 206, 218);
+        }
+        header h1 {
+            padding-left: 20px;
+        }
+        #gnb {
+            padding-right: 20px;
+            display: flex;
+        }
+        #gnb > li {
+            margin-left: 20px;
+        }
+        #gnb li a {
+            font-size: 20px;
+        }
+        main {
+            display: flex;
+            padding: 50px;
+            background: rgb(11, 128, 238);
+        }
+        main > section {
+            width: 100vw;
+            height: 400px;
+            border: 1px solid #fff;
+        }
+        main > section:not(:last-child){
+            margin-right: 50px;
+        }
+        footer {
+            height: 150px;
+            background: rgb(40, 206, 218);
+        }
+        @media screen and (max-width: 600px){
+            main {
+                display: flex;
+                flex-flow: wrap;
+            }
+            main > section:not(:last-child){
+            margin-right: 0;
+            margin-bottom: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>로고</h1>
+        <nav>
+            <h2 class="hidden">네비</h2>
+            <ul id="gnb">
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 class="hidden">1</h2>
+        </section>
+        <section>
+            <h2 class="hidden">2</h2>
+        </section>
+        <section>
+            <h2 class="hidden">3</h2>
+        </section>
+    </main>
+    <footer>footer</footer>
+</body>
+</html>

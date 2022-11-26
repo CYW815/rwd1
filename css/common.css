@@ -152,6 +152,9 @@ footer{
     #header > #lnb {
         top: 30px;
     }
+    #header > h1 {
+        left: 50px;
+    }
     #gnb {
         position: fixed;
         flex-direction: column;
@@ -171,7 +174,7 @@ footer{
         display: block;
     }
     #lnb {
-        flex-direction: column;
+        flex-flow: column wrap;
     }
     #lnb > li:last-child {
         margin-left: 0px;

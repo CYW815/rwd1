@@ -1,0 +1,313 @@
+@charset "utf-8";
+* { box-sizing: border-box; }
+body, h1, h2, h3, ul, p { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: #000;}
+
+/* hidden */
+.hidden {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip-path: polygon(0 0, 0 0, 0 0);
+    overflow: hidden;
+}
+/* header */
+#header {
+    width: 100%;
+}
+#header #logo {
+    width: 1280px;
+    margin: 0 auto;
+}
+#header #logo a {
+    margin: 20px auto;
+    display: block;
+    width: 220px;
+    height: 220px;
+    text-indent: -200%;
+    overflow: hidden;
+    background: url(../images/html5Logo.png) no-repeat;
+    background-size: contain;
+}
+/* gnb */
+#gnb {
+    width: 100%;  
+    border-top: 2px solid rgba(167, 167, 167, 0.7)
+}
+#gnbList {
+    min-width: 1280px;
+    display: flex;
+    justify-content: center;
+}
+#gnbList li a {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    width: 200px;
+    height: 65px;
+}
+#gnbList li a:hover {
+    border-bottom: 2px solid #ff4500;
+}
+/* slider */
+#sliderWrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#sliderList::after {
+    content: "";
+    width: 300%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+#sliderList {
+    width: 300%;
+    height: 800px;
+    display: flex;
+}
+#sliderList1 {
+    position: relative;
+    width: 100%;
+    background: url(../images/slider1.jpg) no-repeat center;
+    background-size: cover;
+}
+#sliderList2 {
+    position: relative;
+    width: 100%;
+    background: url(../images/slider2.jpg) no-repeat center;
+    background-size: cover;
+}
+#sliderList3 {
+    position: relative;
+    width: 100%;
+    background: url(../images/slider3.jpg) no-repeat center;
+    background-size: cover;
+}
+#sliderList div {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+#sliderList p {
+    padding-bottom: 30px;
+    color: #fff;
+    font-size: 40px;
+}
+#sliderList a {
+    margin: 0 auto;
+    padding: 10px 0;
+    display: block;
+    width: 200px;
+    color: #fff;
+    background: #ff4500;
+}
+/* listchoice */
+#listChoice {
+    position: absolute;
+    left: 50%;
+    bottom: 50px;
+    transform: translateX(-50%);
+    display: flex;
+}
+#listChoice li {
+    margin: 0 20px;
+}
+#listChoice li a {
+    display: block;
+    width: 200px;
+    height: 10px;
+    text-align: center;
+    background: #fff;
+    text-indent: -200%;
+    overflow: hidden;
+}
+#listChoice li a.choice {
+    background: #ff4500;
+}
+/* 왜 코딩 교육인가 */
+#eduCoding {
+    width: 100%;
+    background: #faf6f6;
+}
+#eduCoding h2 {
+    margin: 0 auto;
+    width: 1280px;
+    font-size: 40px;
+    text-align: center;
+    padding: 50px 0;
+}
+#eduCodingInfo {
+    width: 1280px;
+    height: 400px;
+    margin: 0 auto;
+    background: url(../images/coding.png) no-repeat right 150px top;
+    background-size: 300px auto;
+}
+#eduCodingInfo > p {
+    width: 610px;
+    padding-top: 100px;
+    margin-left: 50px;
+    line-height: 30px;
+}
+#eduCodingList {
+    width: 100%;
+    background: #fff;
+}
+#eduCodingList > p {
+    margin: 0 auto;
+    width: 1280px;
+    text-align: center;
+    padding: 100px 0 50px;
+    line-height: 30px;
+    color: #ff4500;
+}
+#eduCodingList > p::before {
+    content: "";
+    display: block;
+    width: 1280px;
+    height: 60px;
+    background: url(../images/quot-1.png) no-repeat center top;
+}
+#eduCodingList > p::after {
+    content: "";
+    display: block;
+    width: 1280px;
+    height: 60px;
+    background: url(../images/quot-2.png) no-repeat center bottom;
+}
+#eduCodingList > p span {
+    font-style: italic;
+    color: #a7a7a7;
+}
+/* eduContent */
+#eduContent {
+    width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(2, 365px);
+    gap: 30px;
+}
+.educontentAll {
+    position: relative;
+}
+.educontentAll > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 30px;
+    z-index: 1;
+}
+.educontentAll::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+#eduContent .eduContent1 {
+    grid-row: 1 / 3;
+    background: url(../images/list1.jpg) no-repeat center right;
+    background-size: cover;
+}
+#eduContent .eduContent2 {
+    background: url(../images/list2.jpg) no-repeat center right;
+    background-size: 100% 100%;
+}
+#eduContent .eduContent3 {
+    background: url(../images/list3.jpg) no-repeat center;
+    background-size: 100% 100%;
+}
+/* eduProgram */
+#eduProgram {
+    position: relative;
+    width: 100%;
+    background: #faf6f6;
+    padding-bottom: 50px;
+}
+#eduProgram > h2 {
+    padding: 100px 0 50px;
+    width: 1280px;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 auto;
+}
+#eduProgramList {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+#eduProgramList > li {
+    width: 275px;
+    padding: 36px;
+    background: #fff;
+}
+#eduProgramList > li > h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+/* 위로 */
+#top {
+    position: relative;
+    margin: 0 auto;
+    width: 1280px;
+    height: 30px;
+}
+#top a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+}
+#top a::after {
+    content: "^";
+    position: absolute;
+    padding-top: 3px;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: #8b4513;
+    top: 0;
+    left: 0;
+}
+/* footer */
+#footer {
+    width: 100%;
+    padding: 100px;
+    background-color: #4747ac;
+}
+#footerWrap {
+    position: relative;
+    margin: 0 auto;
+    width: 1280px;
+    display: flex;
+}
+#footerWrap > ul {
+    position: absolute;
+    display: flex;
+    right: 250px;
+    bottom: 0;
+}
+#footerWrap > dl {
+    margin: 0;
+    color: #fff;
+}
+#footerWrap > ul > li {
+    margin: 0 20px;
+}
